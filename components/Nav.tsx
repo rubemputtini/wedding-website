@@ -8,8 +8,8 @@ export default function Nav() {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <header className="px-6 py-4 absolute z-10 w-full bg-slate-100">
-      <nav className="flex justify-between items-center">
+    <header className="px-6 py-4 z-10 w-full bg-slate-100">
+      <nav className="container mx-auto flex justify-between items-center">
         <Link href="/">Isabella & Rubem</Link>
         <ul className="list-none sm:flex hidden justify-end gap-8">
           <li>

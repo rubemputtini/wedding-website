@@ -1,16 +1,19 @@
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import guests from "@/app/utils/guests";
 
 export default function GuestName() {
   const [fullName, setFullName] = useState("");
   const [isValidName, setIsValidName] = useState(true);
+  const router = useRouter();
 
   const handleSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault();
-    const foundGuest = guests.find((guest) => guest.nome === fullName.trim());
+    const foundGuest = guests.find((guest) => guest.name === fullName.trim());
     if (foundGuest) {
       setIsValidName(true);
       console.log("Nome válido:", fullName);
+      router.push("/guest-list");
     } else {
       setIsValidName(false);
       console.log("Nome não encontrado:", fullName);
