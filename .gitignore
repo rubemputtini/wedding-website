@@ -37,3 +37,7 @@ next-env.d.ts
 
 # guests
 guests.ts
+
+#quiz
+quiz.ts
+messages.ts
